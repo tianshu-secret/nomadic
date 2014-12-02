@@ -1,0 +1,145 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+/*background-color:rgb(37,37,37);*/
+background: #FFF;
+font-family:\6977\4F53;
+font-size:25px;
+margin-left:0px;
+margin-top:20px;
+width:99%;
+}
+a {
+	text-decoration: none;
+}
+input {
+	color:#999;
+	width:85%;
+	outline:none;
+}
+
+input[type="checkbox"]{
+	width:13px;
+}
+
+textarea{
+	color:#999;
+	width:84%;
+	outline:none;
+}
+
+#content{
+	float:right;
+	width:80%;
+	padding:0px;
+	margin:0px;
+	}
+	
+#side{
+	float:left;
+	width:20%;
+	padding:0px;
+	margin:0px;
+	}
+
+#recycle{
+	text-align:center;
+	width:30%;
+	margin-top:70px;
+	margin-left:auto;
+	margin-right:auto;
+	display:none;
+}
+
+div#map{
+	float:left;
+	margin-left:0px;
+	margin-bottom:0px;
+	margin-right:0px;
+	margin-top:0px;
+	padding:0px;
+	width: 100%;
+	height:690px;
+	border:none;
+	/*border: 1px solid black;*/
+}
+
+.dot_rectangle{
+	border:1px dotted #999;
+	margin-left: auto;
+	margin-right: auto;
+	padding:3px;
+	width:70%;
+	text-align:center;
+	clear:both;
+}
+.little_dot_rectangle{
+	border:1px dotted #999;
+	float:right;
+	margin-top:20px;
+	margin-bottom:10px;
+	padding:3px;
+	width:30%;
+	text-align:center;
+}
+.radius_rectangle{
+	border:1px dotted #999;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom:15px;
+	margin-top:0px;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:5px;
+	padding-right:5px;
+	text-align:center;
+	font-size:18px;
+	border-radius:5px;
+	color:#000;
+}
+.radius_rectangle:hover{
+	background-color:#F7F7F7;
+}
+
+.my_button:hover{
+	cursor:pointer;
+}
+
+#zidong{
+	color:#CCC;
+}
+
+.divContent,#zidongContent{
+	display:none;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:10px;
+	margin-bottom:-3px;
+	padding:3px;
+	width:70%;
+	font-size:18px;
+	/*text-align:right;*/
+}
+
+.divGap{
+	height:20px;
+}
+.rightContent{
+	float:right;
+}
+.tool_line{
+	position:absolute;
+	top:-10px;
+	left:0px;
+}
+#qingchu,#easyDialogLineId,#easyDialogLineClass{
+	display:none;
+}
+.my_tool{
+	width:50px;
+	height:50px;
+	margin-left:-10px;
+}
+#tool,#eye{
+	margin-left:-20px;
+}

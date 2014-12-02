@@ -1,0 +1,151 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background: #69f;
+}
+a{
+	cursor:pointer;
+	color:#6699FF;
+	text-decoration: none;
+}
+#container { 
+	//background: #9cf url(trees.jpg) no-repeat left top; 
+	background-color:#D4DFE5;
+	padding: 150px 20px 0px 20px;  
+	margin: 0px auto; 
+	margin-top:-9px;
+	margin-bottom:-7px;
+	width:760px;
+	font-size:19px;
+	color:#121a2a;
+	border-left: 2px dashed #000;
+	border-right: 2px dashed #000;
+}
+#container_help { 
+	//background: #9cf url(trees.jpg) no-repeat left top; 
+	background-color:#D4DFE5;
+	padding: 120px 20px 0px 20px;  
+	margin: 0px auto; 
+	margin-top:-9px;
+	margin-bottom:-7px;
+	width:760px;
+	font-size:19px;
+	color:#121a2a;
+	border-left: 2px dashed #000;
+	border-right: 2px dashed #000;
+}
+#header {
+	position:absolute;
+	top:20px;
+	left:219px;
+	color:#fff;
+	font-size:4em;
+}
+.dot_rectangle{
+	border:1px dotted #999;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top:13px;
+	padding-bottom:13px;
+	padding-left:5px;
+	padding-right:5px;
+	text-align:center;
+	font-size:25px;
+	border-radius:5px;
+	color:#000;
+}
+.dot_rectangle:hover{
+	background-color:#6699FF;
+}
+.gap{
+	padding-left:65px;
+	padding-right:65px;
+}
+#footer{
+	margin-left: auto;
+	margin-right: auto;
+	padding-top:40px;
+	padding-bottom:50px;
+	text-align:center;
+}
+.title{
+	font-weight:bold;
+}
+.article{
+	padding:5px 20px 20px 20px;
+}
+#liuyan{
+	width:96%;
+	height:300px;
+}
+#the_left{
+
+}
+#the_right{
+	position:absolute;
+	top:150px;
+	left:650px;
+}
+.gap2{
+	padding-left:35px;
+	padding-right:35px;
+}
+#footer2{
+	margin-left: auto;
+	margin-right: auto;
+	padding-top:50px;
+	padding-bottom:50px;
+	text-align:center;
+}
+#selectBtn
+{
+	position: absolute;
+	left: 85px;
+	top: -3px;
+	width: 119px;
+	height: 27px;
+}
+#cropper
+{
+	margin-top:-18px;
+	border: 1px dotted #000;
+	width:240px;
+	height:240px;
+	background-color:#F6F8F9;
+}
+#preview
+{
+	margin-top:-18px;
+	border: 1px dotted #000;
+	width:50px;
+	height:50px;
+	position:absolute;
+	left:285px;
+	top:53px;
+	background-color:#F6F8F9;
+}
+#xiaochicun
+{
+	position:absolute;
+	left:278px;
+	top:90px;
+	width:70px;
+	text-align:center;
+	font-size:10px;
+}
+#warning
+{
+	position:absolute;
+	top:90px;
+	text-align:center;
+	width:58%;
+	color:rgb(132, 2, 40);
+}
+#warning2
+{
+        position:absolute;
+        top:120px;
+        text-align:center;
+        width:58%;
+        color:rgb(132, 2, 40);
+}

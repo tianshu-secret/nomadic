@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+.head_main {
+  font-family:\6977\4F53;
+  font-size:15px;
+}
+#head_image{
+	 margin-top:-10px;
+	 margin-right:10px;
+	 float:left;
+}
+#head_name{
+	 font-size:20px;
+	 color:#00C;
+}
+.mytick{
+	float:right;
+	width:20px;
+	height:18px;
+	display:none;
+}
+
+#newoldOps{
+	display:none;
+	position:absolute;
+	background:#FFF;
+	padding:1em;
+	font-size:1em;
+	z-index:10;
+	
+	border:1px solid #ccc;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	border-radius:6px;
+	
+ 	-moz-box-shadow:0 0 1px rgba(153,153,153,0.4);
+ 	-webkit-box-shadow:0 0 1px rgba(153,153,153,0.4);
+}
+.newoldOp{
+	cursor:pointer;
+	width:75px;
+	height:24px;
+	float:left;
+	text-align:center;
+	padding:5px 5px 0px 5px;
+}
+.newoldOp:hover{
+	background-color:#B0DCF7;
+}

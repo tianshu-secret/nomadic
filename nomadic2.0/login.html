@@ -1,0 +1,115 @@
+﻿$def with(err,other)
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title>login</title>
+
+<link rel="icon" href="./static/image/favicon.ico" mce_href="./static/image/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="./static/image/favicon.ico" mce_href="./static/image/favicon.ico" type="image/x-icon">
+
+<link href="./static/login/CSS/login.css" rel="stylesheet"/>
+<link href="./static/login/CSS/checkbox.css" rel="stylesheet"/>
+
+<script src="./static/login/JS/changeForm.js"></script>
+<script src="./static/login/JS/formSub.js"></script>
+<script src="./static/login/JS/login.js"></script>
+</head>
+
+<body>
+
+<div>
+    <img src="./static/login/image/bg.jpg" width="100%" height="100%" id="bg"/>
+</div>
+<div id="front">   <!--2--->
+<div class="label"><span id="l1">登陆</span>   <!--3--->
+    <a href=# class="l2" id="l2">注册</a>
+    <a href=# class="l3" id="l3">忘记密码</a>
+    <a href=# class="l4" id="l4">日志</a>
+</div>                 <!--!3--->
+
+<div>          <!--4--->
+    <form method=post action="logcl" class="form" id="form" name="logcl" onsubmit="return formsub();">
+        <p>
+            <input class="username" id="username" name="username" value="请输入用户名">
+	    <div class="mywrong" id="username_img"><img src="./static/login/image/wrong.png" width="30px" height="30px"/></div>
+        </p>
+        <p>
+            <input type="text" value="请输入密码" class="passwd_txt" id="loginPwd_txt"
+            onfocus="p1()">
+            <input name="passwd" type="password" class="passwd" id="loginPwd"
+            onblur="p2()">
+	    <div class="mywrong" id="passwd_img"><img src="./static/login/image/wrong.png" width="30px" height="30px"/></div>
+        </p>
+	<p>
+	   <input class="check" name="check" style="display:none">
+	</p> 
+        <p>
+            <span>
+            <input class="submit" name="submit" type="submit" value="登陆">
+            </span>
+            <span class="squaredThree">
+			<input type="checkbox" value="None" id="squaredThree"/>
+			<label for="squaredThree"></label><span id="jizhuwo">记住我</span>
+			</span>
+        </p>
+    </form>
+</div>    <!--!4--->
+
+</div>     <!--!2--->
+<script type="text/javascript">
+function init(){
+var l1 = document.getElementById("l1");
+var l2 = document.getElementById("l2");
+var l3 = document.getElementById("l3");
+var l4 = document.getElementById("l4");
+l2.onclick=handleButtonOnclick;
+l3.onclick=handleButtonOnclick;
+l4.onclick=handleButtonOnclick;
+
+var username = document.getElementById("username");
+username.onfocus = myfocus;
+username.onblur = myblur;
+	
+$if err == "log_name":
+    var img = document.getElementById("username_img");
+    img.style.display = "block";
+$if err == "log_pass":
+    var img = document.getElementById("passwd_img");
+    img.style.display = "block";    
+    var name = document.getElementById("username");
+    name.value ="$other";
+    name.style.color = "#000";
+$if err == "reg_name":
+    l2.click();
+    var img = document.getElementById("username_img");
+    img.style.display = "block";
+    var name = document.getElementById("username");
+    name.value ="用户已注册";
+    name.style.color = "#840228";
+$if err == "reg_email":
+    l2.click();
+    var img = document.getElementById("email_img");
+    img.style.display = "block";
+    var email = document.getElementById("email");
+    email.value ="邮箱已注册，请直接登录";
+    email.style.color = "#840228";
+$if err == "email":
+    l3.click();
+    var email = document.getElementById("email");
+    email.value ="$other";
+    email.style.color = "#840228";
+$if err == "email_wrong":
+    l3.click();
+    var email = document.getElementById("email");
+    email.value ="$other";
+    email.style.color = "#840228";
+    var img = document.getElementById("email_img");
+    img.style.display = "block";
+}
+window.onload=init;
+</script>
+</body>
+</html>
+

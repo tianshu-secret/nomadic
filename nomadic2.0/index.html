@@ -1,0 +1,131 @@
+$def with(result,subresult,name,head_image,citynum,mile)
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta charset="utf-8" />
+
+<link rel="icon" href="./static/image/favicon.ico" mce_href="./static/image/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="./static/image/favicon.ico" mce_href="./static/image/favicon.ico" type="image/x-icon">
+
+<link href="./static/CSS/nomadic.css" rel="stylesheet"/>
+<link href="./static/CSS/nomadic_side2.css" rel="stylesheet"/>
+<link href="./static/CSS/pickadate_classic.css" rel="stylesheet"/>
+<link href="./static/CSS/easydialog.css" rel="stylesheet"/>
+
+<script src="http://maps.googleapis.com/maps/api/js?v=3.9&amp;sensor=false&amp;libraries=drawing"></script>
+<script src="./static/JS/jquery-1.9.1.min.js"></script>
+<script src="./static/JS/jquery-migrate-1.1.1.min.js"></script>
+<script src="./static/JS/pickadate.legacy.js"></script>
+<script src="./static/JS/rainbow.js"></script>
+<script src="./static/JS/easydialog.js"></script>
+
+<script src="./static/JS/var_all.js"></script>
+<script src="./static/JS/myDialog.js"></script>       
+<script src="./static/JS/tools.js"></script>
+<script src="./static/JS/drag.js"></script>
+<script src="./static/JS/map.js"></script>
+<script type="text/javascript">
+function cunchuButtonOnclick(){
+    var thehidden = document.getElementById("thehidden");
+    var thehidden2 = document.getElementById("thehidden2");
+    var thehidden3 = document.getElementById("thehidden3");
+    var theform = document.getElementById("cunchuform");
+    var theclass = document.getElementById("newoldText");
+
+    alert("存储已成功");
+
+    //thehidden  mapArray
+    var s = "";
+    for (var i =0; i<mapArray.length; i++) {
+        s += mapArray[i];
+        s += "!";
+    }
+    thehidden.value = s;
+
+    //thehidden3  titleArray
+    s = "";
+    for (var i =0; i<titleArray.length; i++) {
+        s += titleArray[i];
+        s += "!";
+    }
+    thehidden3.value = s;
+
+    //thehidden2  lineArray
+    s = "";
+    for (var i =0; i<lineArray.length; i++) {
+        for (var j =0; j<lineArray[i].length; j++) {
+	    //将经纬度由小数点后10多位缩减成小数点后5位以方便保存
+            var the_lat = Math.round(lineArray[i][j].lat()*100000)/100000;
+            var the_lng = lineArray[i][j].lng().toFixed(5);
+	    s += "\u0028"+the_lat+","+the_lng+"\u0029";
+	    s += "!";
+	}
+        s += "@";
+    }
+    thehidden2.value = s;    
+
+    //theclass
+    if(theclass.value == "新的探索")
+        theclass.value = "0";
+    else
+        theclass.value = "1";
+
+    theform.submit();
+}
+</script>  
+<script src="./static/JS/setSideContent.js"></script>       
+<script src="./static/JS/nomadic.js"></script> 
+<title>nomadic2.0</title>
+</head>
+
+<body>
+
+<!--SIDE--->
+<div id="side">
+</div>
+<!--SIDE--->
+
+
+
+
+
+<!--CONTENT--->
+<div id="content">
+<div id="map"></div>
+</div>
+<!--CONTENT--->
+
+
+<script type="text/javascript">
+myName = "$name.encode('latin1','ignore')";
+myHead_image = "$head_image.encode('latin1','ignore')";
+myCitynum = "$citynum";
+myMile = "$mile";
+$for todo in result:
+    $if todo.classid == 0:
+        mynameArray0.push("$todo.name.encode('latin1','ignore')");
+        mylineArray0.push("$todo.line.encode('latin1','ignore')");
+        myidArray0.push("$todo.id");
+        mybeizhuArray0.push("$todo.beizhu.encode('latin1','ignore')");
+	mytitleArray0.push("$todo.lineinfo.encode('latin1','ignore')");
+	mytimeArray0.push("$todo.timeinfo.encode('latin1','ignore')");
+    $if todo.classid == 1:
+        mynameArray1.push("$todo.name.encode('latin1','ignore')");
+        mylineArray1.push("$todo.line.encode('latin1','ignore')");
+        myidArray1.push("$todo.id");
+        mybeizhuArray1.push("$todo.beizhu.encode('latin1','ignore')");
+	mytitleArray1.push("$todo.lineinfo.encode('latin1','ignore')");
+	mytimeArray1.push("$todo.timeinfo.encode('latin1','ignore')");
+$for todo in subresult:
+    $if todo.classid == 0:
+        subidArray0.push("$todo.lineid");
+        sublineArray0.push("$todo.line.encode('latin1','ignore')");
+    $if todo.classid == 1:
+        subidArray1.push("$todo.lineid");
+	sublineArray1.push("$todo.line.encode('latin1','ignore')");
+</script>  
+
+
+</body>
+</html>

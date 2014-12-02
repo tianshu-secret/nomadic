@@ -1,0 +1,183 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	/*background:url(../image/bg.jpg) 20% 39%;*/
+    /*background-repeat: no-repeat;*/
+		/*background-color:rgb(178,189,196);*/
+}
+#bg{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:1;
+}
+#front{
+	margin-top:15%;
+	margin-left:38%;
+}
+
+.label{
+	color:#FFF;
+	float:left;
+	position:relative;
+	left:5px;
+	font-family:\6977\4F53;
+	font-size:25px;
+	z-index:9;
+}
+a{
+	color:#FFF;
+}
+a:link.l2{
+	font-family:\6977\4F53;
+	color:#FFF;
+	font-size: 20px;
+	position: absolute;
+	left:331px;
+	bottom: 30px;
+	top: -80px;
+	width: 42px;
+	text-decoration:none;
+}
+a:link.l3{
+	font-family:\6977\4F53;
+	font-size: 10px;
+	color:#FFF;
+	position: absolute;
+	left:-143px;
+	top:166px;
+	text-decoration:none;
+}
+a:link.l4{
+	font-family:\6977\4F53;
+	font-size: 15px;
+	color:#FFF;
+	position: absolute;
+	right:105px;
+	bottom:20px;
+	top: -168px;
+	text-decoration:none;
+}
+a:hover.l2{
+	font-family:\6977\4F53;
+	color:#FFF;
+	font-size: 23px;
+	position: absolute;
+	left:331px;
+	bottom: 30px;
+	top: -80px;
+	width: 53px;
+	text-decoration:none;
+}
+a:hover.l3{
+	font-family:\6977\4F53;
+	font-size: 23px;
+	color:#FFF;
+	position: absolute;
+	left:-143px;
+	top:166px;
+	text-decoration:none;
+}
+a:hover.l4{
+	font-family:\6977\4F53;
+	font-size: 23px;
+	color:#FFF;
+	position: absolute;
+	right:105px;
+	bottom:20px;
+	top: -168px;
+	text-decoration:none;
+}
+.username{
+	color:#999999;
+	border-radius:5px; 
+	height:35px;
+	width:250px;
+	background:rgba(255,255,255,0.8);
+}
+.passwd_txt{
+	color:#999999; 
+	border-radius:5px;
+	height:35px;
+	width:250px;
+	background:rgba(255,255,255,0.8);
+}
+.passwd{
+	display:none;
+	border-radius:5px;
+	height:35px;
+	width:250px;
+	background:rgba(255,255,255,0.8);
+}
+.submit,.reset{
+	margin-left:45px;
+	margin-right:10px;
+	margin-top:8px;
+	margin-bottom:0px;
+	background:rgb(14, 130, 238);
+	height:30px;
+	border-radius:5px;
+	border-bottom-color:#ff6633;
+	border-bottom-width:0px;
+	border-top-width:0px;
+	border-left-width:0px;
+	border-right-width:0px; 
+	color: #000000;
+}
+.form{
+	float:left;
+	padding-bottom:0px;
+	padding-left: 15px;
+	padding-right: 15px;
+	position:relative;
+	top:15px;
+	right:25px;
+	font-family:\6977\4F53;
+	background-image:url(./form_bg.jpg) ;
+	background-repeat: no-repeat;
+	z-index:8;
+	background:rgba(34,139,255,0.3);
+	border-radius:15px;
+	width:300px;
+	border-top: 0px solid #EEEEEE;
+	border-left: 0px solid #EEEEEE;
+	border-bottom: 1px solid #717171;
+	border-right: 1px solid #717171;
+}
+#jizhuwo{
+	position:absolute;
+	margin-left:23px;
+	margin-top:13px;
+	width:40px;
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:10px;
+}
+.mywrong{
+	display:none;
+	float:right;
+	margin-top:-50px; 
+}
+#username_img{
+	display:none;
+	position:absolute;
+	top:183px;
+	left:540px;
+}
+#passwd1_img{
+	display:none;
+	position:absolute;
+	top:272px;
+	left:540px;
+}
+#passwd2_img{
+	display:none;
+	position:absolute;
+	top:330px;
+	left:540px;
+}
+#passwd3_img{
+	display:none;
+	position:absolute;
+	top:390px;
+	left:540px;
+}

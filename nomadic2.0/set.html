@@ -1,0 +1,70 @@
+﻿$def with(err)
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title>Set</title>
+
+<link rel="icon" href="./static/image/favicon.ico" mce_href="./static/image/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="./static/image/favicon.ico" mce_href="./static/image/favicon.ico" type="image/x-icon">
+
+<link href="./static/login/CSS/welcome.css" rel="stylesheet"/>
+<link href="./static/login/CSS/login2.css" rel="stylesheet"/>
+
+<script src="./static/JS/jquery-1.9.1.min.js"></script>
+<script src="./static/JS/jquery-migrate-1.1.1.min.js"></script>
+<script src="./static/login/JS/photo.js"></script>
+<script src="./static/login/JS/changeForm.js"></script>
+<script src="./static/login/JS/shezhi.js"></script>
+</head>
+
+<body>
+<div id="container">   <!--2--->
+<div id="header">Set</div>
+<div id="warning"></div>
+<div id="the_left">
+<div class="title">修改昵称</div>
+<div class="article">
+<form id="name_form" method="post" action="nameSave">
+<input class="username" id="username" name="username" value="请输入新的昵称">
+<div id="username_img"><img src="./static/login/image/wrong.png" width="30px" height="30px"/></div>
+</form>
+</div>
+<div class="title">修改密码</div>
+<div class="article">
+<form id="pass_form" method="post" action="passSave">
+<input class="username" id="passwd1" name="passwd1" value="请输入旧的密码"><div id="passwd1_img"><img src="./static/login/image/wrong.png" width="30px" height="30px"/></div>
+<p><input class="username" id="passwd2" name="passwd2" value="请输入新的密码"><div id="passwd2_img"><img src="./static/login/image/wrong.png" width="30px" height="30px"/></div></p>
+<input class="username" id="passwd3" name="passwd3" value="请重复新的密码"><div id="passwd3_img"><img src="./static/login/image/wrong.png" width="30px" height="30px"/></div>
+</form>
+</div>
+</div>
+<div id="the_right">
+<div class="title">上传头像<a id="selectBtn" href="javascript:void(0);" onClick="document.getElementById('photo_input').click();"><img src="./static/login/image/up.png" width="60px" height="60px" style="margin-top:-15px;margin-left:-15px;border:0px solid;"/></a></div>
+<div class="article">
+		<form id="photo_form" method="post" action="photoSave" enctype="multipart/form-data">
+		<input type="file" id="photo_input" size="10" name="the_image" style="visibility:hidden;" onChange="selectImage(this)" />
+		<input type="text" id="name_input" size="10" name="the_name" style="visibility:hidden;"/>
+		</form>
+		<div id="wrapper">
+			<canvas id="cropper"></canvas>
+            <canvas id="preview" class="preview"></canvas>
+            <span id="xiaochicun">小尺寸</span>
+        </div>
+</div>
+</div>
+<div id="footer2">
+<a class="dot_rectangle" onClick="nameSave()">保存昵称</a><a class="gap2"></a>
+<a class="dot_rectangle" onClick="passSave()">保存密码</a><a class="gap2"></a>
+<a class="dot_rectangle" onClick="photoSave()">保存头像</a><a class="gap2"></a>
+<a class="dot_rectangle" href="http://42.96.184.223/nomadic/">回到网站</a></div>
+</div> <!--!2--->
+<script type="text/javascript">
+var warning = document.getElementById("warning");
+$if err != "OK":
+    warning.innerHTML = "$err";
+</script>
+</body>
+</html>
+
